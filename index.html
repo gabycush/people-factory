@@ -10,17 +10,34 @@
   <body>
     <h1>A Factory of People</h1>
     <section>
-      <div class="special">
+      <div>
         <form id="personForm">
           <p>
             <label for="personName">Name: </label>
-            <input type="text" name="personName">
+            <input type="text" name="personName" required>
+          </p>
+          <p>
+            <label for="personAge">Age: </label>
+            <input type="number" name="personAge" required>
+          </p>
+          <p>
+            <label for="personColor">Favorite Color: </label>
+            <input type="text" name="personColor">
           </p>
           <p>
             <button type="submit"> Go </button>
         </form>
       </div>
+      <br />
+      <div class="special">
+        <p class="results"></p>
+      </div>
     </section>
     <script src="index.js"></script>
   </body>
 </html>
+
+<!-- ADD ANOTHER INPUT TO THE FORM. USE THE VALUES FROM
+BOTH INPUTS IN THE H1. BONUS IF YOU ADD AN EMPTY P TO THE
+PAGE AND USE THE FORM VALS TO DO SOMETHING WITH IT. ALSO IF
+YOU MAKE IT PRETTY :) -->

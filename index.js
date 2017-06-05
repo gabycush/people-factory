@@ -1,10 +1,25 @@
 const personForm = document.querySelector('#personForm')
-const personName =
+
+personForm.addEventListener('submit', handleSubmit)
 
 function handleSubmit(ev){
   ev.preventDefault()
   const f = ev.target
-  console.log(f.personName.value)
+  hChange(f)
+  pChange(f)
 }
 
-personForm.addEventListener('submit', handleSubmit)
+function hChange(f){
+  name = f.personName.value
+  age = f.personAge.value
+  document.querySelector('h1').textContent = 'Profile: ' + name + ', ' + age
+}
+
+function pChange(f){
+  color = f.personColor.value
+  name = f.personName.value
+  age = f.personAge.value
+  document.querySelector('.results').textContent = 'Hello, ' + name + '! You are ' + age + ' years old!'
+  document.querySelector('.results').style.color = color
+
+}
