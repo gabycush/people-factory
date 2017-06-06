@@ -9,7 +9,10 @@ function handleSubmit(ev){ //stop the form from submitting and call the function
   pChange(f)
   const details = document.querySelector('#details')
   const name = f.personName.value
-  details.innerHTML = `<em>${name}</em>`
+  //details.innerHTML = `<em>${name}</em>`
+  const em = document.createElement('em')
+  em.textContent = name
+  details.appendChild(em)
 }
 
 function hChange(f){ //change the h1 to include the name and age
